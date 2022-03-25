@@ -10,7 +10,7 @@ its URL. Method newsReuters(url) receives string argument
 and returns two lists titleList and hrefList.
 titleList has article title, hrefList has news URL.
 
-tradingEconomics.py: 
+tradingEconomics.py: \n
 Do similar thing to reuters.py, but created for trading
 Economics website. It also receives the news page URL 
 and returns titleList and hrefList.
