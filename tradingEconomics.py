@@ -33,7 +33,7 @@ def newsTradingEconomics(url):
     # All the important info is at the position of groupedA[][2]
 
 
-    # -------------------I want the elements with separate lists-------------------------------
+    # -------------------I need the elements with separate lists-------------------------------
     hrefList = []
     titleList = []
     count = 0
@@ -44,7 +44,7 @@ def newsTradingEconomics(url):
 
         soup2 = BeautifulSoup(str(i[2]), 'html.parser')
         tmpA = soup2.find('a')
-        hrefList.append('https://tradingeconomics.com' + tmpA.get('href'))  # append absolute link
+        hrefList.append('https://tradingeconomics.com' + tmpA.get('href')) # append absolute link
 
         groupedA[count] = i[2]
         count += 1

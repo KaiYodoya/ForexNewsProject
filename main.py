@@ -18,7 +18,7 @@ def weblink(*args):
 def displayTradingEconomics():
     # Message in the title area
     global w
-    w["text"] = "display Treading Economics website"
+    w["text"] = "\ndisplay Treading Economics website"
 
     # display space settings
     global scroll_bar 
@@ -56,7 +56,7 @@ def displayTradingEconomics():
 def displayReuters():
     # message in the title area
     global w
-    w["text"] = "display Reuter news website"
+    w["text"] = "\ndisplay Reuter news website"
 
     # display space settings
     global scroll_bar 
