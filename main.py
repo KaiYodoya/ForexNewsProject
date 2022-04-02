@@ -25,13 +25,13 @@ def displayTradingEconomics():
     global mylist
     mylist.delete(0, END)
 
-    countryName = variable1.get()
+    cName = countryName.get()
     siteURL = {
         "Japan" : 'https://tradingeconomics.com/japan/news'
         , "United States" : 'https://tradingeconomics.com/united-states/news'
     }
-    newsTitle = newsTradingEconomics(siteURL[variable1.get()])[0]
-    newsURL = newsTradingEconomics(siteURL[variable1.get()])[1]
+    newsTitle = newsTradingEconomics(siteURL[cName])[0]
+    newsURL = newsTradingEconomics(siteURL[cName])[1]
     tmpNewList = []
     count = 0
     for item in range(len(newsTitle)):
@@ -63,13 +63,13 @@ def displayReuters():
     global mylist
     mylist.delete(0, END)
 
-    countryName = variable1.get()
+    cName = countryName.get()
     siteURL = {
         "Japan" : 'https://www.reuters.com/site-search/?query=japan'
         , "United States" : 'https://www.reuters.com/site-search/?query=us'
     }
-    newsTitle = newsReuters(siteURL[variable1.get()])[0]
-    newsURL = newsReuters(siteURL[variable1.get()])[1]
+    newsTitle = newsReuters(siteURL[cName])[0]
+    newsURL = newsReuters(siteURL[cName])[1]
 
     tmpNewList = []
     count = 0
@@ -107,9 +107,9 @@ myReuter = Button(fm, text='Reuter', command=displayReuters, width=20).pack(side
 myExit = Button(fm, text='Stop', command=root.destroy, width=20).pack(side=LEFT)
 
 # dropdown menu to select country
-variable1 = StringVar(root)
-variable1.set("Japan") # default value
-country1 = OptionMenu(root, variable1, "Japan", "United States").pack()
+countryName = StringVar(root)
+countryName.set("Japan") # default value
+country1 = OptionMenu(root, countryName, "Japan", "United States").pack()
 
 # display title message
 titleMessage = Label(root, text="Select option to display", font="Helvtica 15 bold")
